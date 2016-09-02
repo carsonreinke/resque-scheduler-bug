@@ -1,0 +1,6 @@
+development:
+  basic: 3
+test:
+  basic: 3
+production:
+  basic: 3
