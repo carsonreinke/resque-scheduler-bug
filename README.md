@@ -17,6 +17,10 @@ bundle exec rake resque:pool
 bundle exec rake resque:scheduler
 ```
 
+Finally, navigate to `http://localhost:300/jobs`.  You will notice that the 
+schedule tab has no jobs listed.  However, if you look at the consoles the 
+above resque-pool and resque-scheduler processes were started in, you can 
+see that the jobs are being queue and run correctly.
 
 ## Info
 
