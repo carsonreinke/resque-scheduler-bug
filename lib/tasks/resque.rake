@@ -27,17 +27,7 @@ end
 
 
 task 'resque:schedule' => ['resque:prep_scheduler', :environment] do
-  schedule = {}
-  schedule["test_job"] = {
-    description: "test job that should appear",
-    every: ["30s", {first_in: "0m"} ],
-    class: "TestJob",
-    queue: "basic",
-    args: [
-      "hello world"
-    ]
-  }
-  Resque.schedule = ActiveScheduler::ResqueWrapper.wrap schedule
+  
 end
 task 'resque:scheduler' => 'resque:schedule'
 
